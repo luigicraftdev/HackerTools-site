@@ -1,0 +1,492 @@
+:root {
+    --green: var(--green);
+    --green-dim: #0ab334;
+    --green-dark: #020d04;
+    --green-glow: rgba(0,255,65,0.4);
+
+    --red: #ff0000;
+    --amber: #2aff00c7;
+    --blue: #00ff66;
+
+    --bg: var(--green-dark);
+    --panel: #073118d8;
+    --border: rgba(0,255,65,0.25);
+
+    --font-display: "Orbitron", sans-serif;
+    --font-tech: "Bruno Ace SC", sans-serif;
+    --font-mono: "Share Tech Mono", monospace;
+    --font-alt: "Audiowide", sans-serif;
+}
+
+
+.logo {
+    font-family: var(--font-display);
+    font-weight: 900;
+    color: var(--green);
+    font-size: 110px;
+    text-align: center;
+    text-shadow:
+      0 0 10px var(--green-glow),
+      0 0 30px var(--green-glow);
+}
+
+.logo2 {
+  font-family: "Bruno Ace SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--green);
+  font-size: 110px;
+  text-align: center;
+  text-shadow:
+    0 0 10px var(--green-glow),
+    0 0 30px var(--green-glow);
+}
+
+body {
+    background: var(--green-dark);
+    font-family: "Orbitron", sans-serif;
+    overflow-x: hidden;
+    user-select:none;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.12) 2px,
+      rgba(0,0,0,0.12) 4px
+    );
+    pointer-events: none;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.6) 100%);
+    pointer-events: none;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.version,
+.how_Does_It_Work {
+    color: #00ff4086;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.sub-bar {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.sub-item {
+    color: var(--green);
+    font-size: 14px;
+    text-shadow: 0 0 10px rgba(0,255,65,0.3);
+    font-family: "Bruno Ace SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.h1_HashCracker-title ,
+.h1_PasswordDifficulty-title {
+    text-align: center;
+    color: var(--green);
+}
+
+.big {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.panel {
+    flex: 1;
+}
+
+.sub-item.big {
+    color: var(--green);
+    font-size: 35px;
+    font-weight: 700;
+    text-shadow: 0 0 10px var(--green-glow);
+    text-align: center;
+}
+
+.sub-desc {
+    margin-top: 8px;
+    color: var(--amber);
+    font-size: 21px;
+    line-height: 1.8;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    text-align: center;
+    font-family: "Share Tech Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.right {
+    text-align: right;
+}
+
+.toggle_circle {
+  width: 180px;
+  height: 52px;
+  background: var(--blue-green-green);
+  border-radius: 999px;
+  position: absolute;
+  z-index: 1;
+  transition: transform 0.5s ease;
+  box-shadow: 0 0 18px rgba(0, 255, 102, 0.8);
+}
+
+.toggle.active .toggle_pass {
+  color: var(--green-dark);
+}
+
+.toggle.active .toggle_hash {
+  color: var(--blue-green-green);
+}
+
+.toggle:not(.active) .toggle_hash {
+  color: var(--green-dark);
+}
+
+.toggle:not(.active) .toggle_pass {
+  color: var(--blue-green-green);
+}
+
+
+.toggle.active .toggle_circle {
+  transform: translateX(180px);
+}
+
+.toggle {
+  width: 360px;
+  height: 52px;
+  background: #111;
+  border: 2px solid var(--blue-green-green);
+  border-radius: 999px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 102, 0.35);
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bruno-ace-sc-regular {
+  font-family: "Bruno Ace SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.toggle_label {
+  position: absolute;
+  top: 0;
+  height: 52px;
+  line-height: 52px;
+  color: var(--blue-green-green);
+  font-size: 20px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.toggle_hash {
+  left: 65px;
+}
+
+.toggle_pass {
+  right: 65px;
+}
+
+.button_back{
+font-family: "Bruno Ace SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--green);
+    font-size: 25px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.4), 0 0 30px rgba(0, 255, 65, 0.4);
+    background-color: #034a19e4;
+    border: 2px solid #0f511f;
+}
+
+.button_back:hover {
+  animation:glitchanim 1ms infinite;
+}
+
+@keyframes glitchanim {
+  0%,
+  32.9%,
+  66.1%,
+  100% {
+    transform: translateX(0);
+  }
+  33%,
+  66% {
+    transform: translateX(3px);
+  }
+}
+
+
+.SCU {
+  text-align: center;
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  user-select: none;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  text-shadow:
+    0 0 10px var(--green-glow),
+    0 0 30px var(--green-glow);
+  font-style: normal;
+  color: var(--green);
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.SCU span {
+  display: inline-block;
+}
+
+.punto2 {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  box-shadow: 0 0 6px red;
+  margin-left: 10px;
+}
+
+.panel{
+  background: var(--panel);
+  border: 1px solid #03ff68f3;
+  border-radius: 4px;
+  padding: 2rem;
+  margin: 1.5rem;
+  backdrop-filter: blur(4px);
+  animation: 0.6s 
+  ease 0s 1 normal both running fadeIn;
+}
+
+.panel-title{
+  font-size: 20px;
+  margin-bottom: 1rem;
+  color: #00ff40;
+  font-weight: bold;
+  letter-spacing: 0.3em;
+}
+
+.panel-title::before{
+  content:"//";
+  color: red;
+  
+}
+
+@keyframes fadeIn {
+0% {
+    opacity: 0;
+    transform: translateY(10px);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0px);
+}
+}
+.punto1 {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #3afa00;
+  box-shadow: 0 0 6px green;
+  margin-left: 10px;
+}
+
+
+#HashCrackerSystem,
+#PasswordDifficultySystem {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.active-section {
+  opacity: 1;
+  transform: translateX(0);
+  display: block;
+}
+
+.exit-right {
+  opacity: 0;
+  transform: translateX(40px);
+  display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.section_view {
+  width: 100%;
+  padding: 1.5rem;
+}
+
+
+.hash-enter {
+  animation: hashEnter 0.1s ease forwards;
+}
+
+@keyframes hashEnter {
+  from {
+    opacity: 0;
+    transform: translateX(-1200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hash-exit {
+  animation: hashExit 0.1s ease forwards;
+}
+
+@keyframes hashExit {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(1200px);
+  }
+}
+
+.pass-enter {
+  animation: passEnter 0.1s ease forwards;
+}
+
+@keyframes passEnter {
+  from {
+    opacity: 0;
+    transform: translateX(-1200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.pass-exit {
+  animation: passExit 0.1s ease forwards;
+}
+
+@keyframes passExit {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(1200px);
+  }
+}
+
+.inputhash {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  width: calc(100% - 2rem);
+  background-color: rgba(0,255,65,0.04);
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  font-size: 1.09rem;
+  color: var(--green-dim);
+}
+
+.inputhash::placeholder {
+  color: #10c63e;
+}
+
+
+  .btn {
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 1px solid var(--green);
+    background: transparent;
+    color: var(--green);
+    padding: 0.6rem 1.4rem;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.15s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--green);
+    transform: translateX(-100%);
+    transition: transform 0.2s;
+    z-index: -1;
+  }
+
+  .btn:hover::before { transform: translateX(0); }
+  .btn:hover { color: var(--bg); box-shadow: 0 0 20px var(--green-glow); }
+  .btn:active { transform: scale(0.97); }
+
+  .btn.btn-red {
+    border-color: var(--red);
+    color: var(--red);
+  }
+  .btn.btn-red::before { background: var(--red); }
+  .btn.btn-red:hover { color: var(--bg); box-shadow: 0 0 20px rgba(255,45,85,0.4); }
+
+  .btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  .btn:disabled::before { display: none; }
