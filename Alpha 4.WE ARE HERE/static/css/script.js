@@ -41,9 +41,6 @@ if (isRight) {
   }
 });
 
-let currentES = null;
-  let crackRunning = false;
-
   function now() {
     return new Date().toLocaleTimeString('it-IT', {hour:'2-digit', minute:'2-digit', second:'2-digit'});
   }
