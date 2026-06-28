@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Hacker Tools</title>
+    <!--FONT-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">       
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">  
+        <link rel="icon" href="/static/img/img_favicon.jpg">
+
+</head>
+
+<body>
+    <div class="bg-grid">
+    </div>
+    <div class="bg_green">
+        <div class="container">
+
+            <div class="top-bar">
+                <div class="version">version : Alpha 5.1 (the last A1pha)</div>
+
+                <a href="/HDIW" class="how_Does_It_Work">
+                How Does It Work ??
+                </a>
+            </div>
+
+            <!-- LOGO -->
+            <header>
+                <div class="logo">H4cker To0ls</div>
+            </header>
+            <div class="toggle" id="toggleID">
+                <span class="toggle_label toggle_hash">
+                    HCS
+                </span>
+                <span class="toggle_label toggle_pass">
+                    PDTS
+                </span>
+                <div class="toggle_circle"></div>
+            </div>
+            <div class="SCU">
+                <span class="punto1"></span>
+                <span>SYSTEM STATUS: ONLINE
+                <span class="punto1"></span>
+                SERVER CONNECTION: SUCCESSFUL
+                <span class="punto2"></span>
+                FOR EDUCATIONAL PURPOSES ONLY</span> 
+            <!--8743b52063cd84097a65d1633f5c74f5</span>!-->
+            </div>
+            <section id="HashCrackerSystem" class="section_view active-section">
+                <h1 class="h1_HashCracker-title">Hash Cracker System</h1>
+                <div class="panel">
+                    <div class="panel-title">
+                        01 ║ ANALIZE HASH
+                    </div>
+                    <div class="inputhash_DIV">
+                        <input type="text" placeholder="INSERT HERE HASH" class="inputhash" id="inputhash" autocomplete="off">
+                    </div>
+                    <div class="buttonhash_DIV">
+                        <button class="btn" onclick="identifyHash()"> [ ANALIZE ] </button>
+                        <button class="btn-red btn" onclick="resetAll()"> [ RESET ] </button>
+                    </div>
+                    <div id="identify-result">
+                    </div>
+                </div>
+                <div id="crack-panel" style="display: none;">
+                </div>
+            </section>
+            <section id="PasswordDifficultySystem" class="hidden section_view">
+                <h1 class="h1_PasswordDifficulty-title">Password Dyfficulty Tester System</h1>
+                <h2 class="cs_PDTS">
+                    Coming Soon !
+                </h2>
+            </section>
+        </div>
+    </div>
+    <script src="/static/css/script.js"></script>
+</body>
+</html>
