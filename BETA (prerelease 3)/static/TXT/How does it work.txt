@@ -1,9 +1,0 @@
-To understand how a hash cracker works, first you need to insert your hash into the website. Once
-you submit it, the site automatically analyzes the hash to determine which type it is
-(for example MD5, SHA-1, or SHA-256). After identifying it, you select the first matching option 
-suggested by the tool.
-
-Next, the website saves your hash into a file so it can be processed later. This file is then passed
-to a program called John the Ripper, which is a powerful password-cracking tool used to try and recover
-the original password behind the hash.
-Finally, after the process is completed, the tool returns the result. Here is your decrypted hash.
